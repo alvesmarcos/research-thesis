@@ -25,3 +25,11 @@ AutoML is defined as a combination of automation and machine learning. In a word
 
 2019 | AutoML: A Survey of the State-of-the-Art | Xin He, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1908.00709.pdf)
 
+## Repositories
+
+2020 | Awesome AutoML Papers | @hibayesian | 2.3k | [`GitHub`](https://github.com/hibayesian/awesome-automl-papers)
+
+2020 | Auptimizer | @LGE-ARC-AdvancedAI | 133 | [`GitHub`](https://github.com/LGE-ARC-AdvancedAI/auptimizer)
+
+2020 | TPOT | @EpistasisLab | 6.9k | [`GitHub`](https://github.com/EpistasisLab/tpot)
+

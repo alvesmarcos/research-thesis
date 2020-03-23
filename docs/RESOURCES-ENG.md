@@ -2,7 +2,7 @@
 
 A minimalist Automated Machine Learning tool to optimize Neural Networks Models pipeline.
 
-<img src="https://www.transperfect.com/sites/default/files/MT-cover-final.jpg" height=""/>
+<img src="https://translate.google.com/about/images/hero-forbusiness.jpg" />
 
 > This document is constantly changing, please do not use as your main resource.
 

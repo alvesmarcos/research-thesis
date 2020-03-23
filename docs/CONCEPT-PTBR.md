@@ -2,8 +2,9 @@
 
 Construir uma ferramenta integrada com [fairseq](https://github.com/pytorch/fairseq) para automatização de **treinamento**, **validação** e **teste** para modelos de tradução *(machine translation)*.
 
-<img src="https://translate.google.cn/about/images/hero-forbusiness.jpg" />
-
+<p align="center">
+	<img src="https://pytorch.org/assets/images/fairseq_logo.png" height="220" />
+</p>
 
 ## Linhas de Pesquisa
 

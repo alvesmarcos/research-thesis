@@ -15,7 +15,7 @@ Machine Learning (ML) has achieved considerable successes in recent years and an
 -   **Preprocess the data**,
 -   **Select appropriate features**,
 -   Select an appropriate model family,
--   Optimize model hyperparameters,
+-   **Optimize model hyperparameters**,
 -   Postprocess machine learning models,
 -   Critically analyze the results obtained.
 
@@ -23,7 +23,28 @@ AutoML is defined as a combination of automation and machine learning. In a word
 
 ## Papers
 
+2020 | Exploring Benefits of Transfer Learning in Neural Machine Translation | Tom Kocmi | arXiv | [`PDF`](https://arxiv.org/pdf/2001.01622.pdf)
+
+2020 | Benchmark and Survey of Automated Machine Learning Frameworks | Marc-Andre Zoller, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1904.12054.pdf)
+
 2019 | AutoML: A Survey of the State-of-the-Art | Xin He, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1908.00709.pdf)
+
+2019 | Pay Less Attention With Lightweight And Dynamic Convolutions | Felix Wu, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1901.10430.pdf)
+
+2018 | Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary | Surafel M. Lakew, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.01137.pdf)
+
+2017 | Convolutional Sequence to Sequence Learning | Jonas Gehring, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1705.03122.pdf)
+
+2017 | A Comparative Study of Word Embeddings for Reading Comprehension | Bhuwan Dhingra, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1703.00993.pdf)
+
+2017 | Attention Is All You Need | Ashish Vaswani, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1706.03762.pdf)
+
+2016 | Text Understanding from Scratch | Xiang Zhang, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1502.01710.pdf)
+
+2016 | Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation | Yonghui Wu, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1609.08144.pdf)
+
+2015 | How to Generate a Good Word Embedding? | Siwei Lai, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1507.05523.pdf)
+
 
 ## Repositories
 
@@ -32,4 +53,3 @@ AutoML is defined as a combination of automation and machine learning. In a word
 2020 | Auptimizer | @LGE-ARC-AdvancedAI | 133 | [`GitHub`](https://github.com/LGE-ARC-AdvancedAI/auptimizer)
 
 2020 | TPOT | @EpistasisLab | 6.9k | [`GitHub`](https://github.com/EpistasisLab/tpot)
-

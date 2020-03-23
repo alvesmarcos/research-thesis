@@ -1,8 +1,8 @@
-# Stones
+# Lang Translation
 
-A minimalist Automated Machine Learning tool to optimize Neural Networks Models pipeline. Each step of the pipeline is named like one of **Infinity Stones**, if you do not know what I am talk about please click [here](https://en.wikipedia.org/wiki/Infinity_Gems).
+A minimalist Automated Machine Learning tool to optimize Neural Networks Models pipeline.
 
-<img src="https://hackernoon.com/hn-images/1*d2jR9CUCNGiSHbarvQI4vA.png" height=""/>
+<img src="https://www.transperfect.com/sites/default/files/MT-cover-final.jpg" height=""/>
 
 > This document is constantly changing, please do not use as your main resource.
 

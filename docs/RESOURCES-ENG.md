@@ -31,9 +31,17 @@ AutoML is defined as a combination of automation and machine learning. In a word
 
 2019 | Pay Less Attention With Lightweight And Dynamic Convolutions | Felix Wu, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1901.10430.pdf)
 
+2019 | Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages | Yang Liu, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)
+
+2019 | Hierarchical Transfer Learning Architecture for Low-Resource Neural Machine Translation | Gongxu Luo, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8805098)
+
 2018 | Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary | Surafel M. Lakew, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.01137.pdf)
 
+2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
+
 2017 | Convolutional Sequence to Sequence Learning | Jonas Gehring, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1705.03122.pdf)
+
+2017 | Neural Response Generation with Dynamic Vocabularies | Yu Wu, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1711.11191.pdf)
 
 2017 | A Comparative Study of Word Embeddings for Reading Comprehension | Bhuwan Dhingra, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1703.00993.pdf)
 
@@ -45,6 +53,7 @@ AutoML is defined as a combination of automation and machine learning. In a word
 
 2015 | How to Generate a Good Word Embedding? | Siwei Lai, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1507.05523.pdf)
 
+2015 | Transfer Learning for Bilingual Content Classification | Qian Sun, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/2783258.2788575)
 
 ## Repositories
 

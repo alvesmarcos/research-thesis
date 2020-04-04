@@ -27,6 +27,8 @@ AutoML is defined as a combination of automation and machine learning. In a word
 
 2020 | Benchmark and Survey of Automated Machine Learning Frameworks | Marc-Andre Zoller, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1904.12054.pdf)
 
+2019 | Transfer Learning across Languages from Someone Else’s NMT Model | Tom Kocmi, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1909.10955.pdf)
+
 2019 | AutoML: A Survey of the State-of-the-Art | Xin He, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1908.00709.pdf)
 
 2019 | Pay Less Attention With Lightweight And Dynamic Convolutions | Felix Wu, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1901.10430.pdf)
@@ -38,6 +40,8 @@ AutoML is defined as a combination of automation and machine learning. In a word
 2018 | Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary | Surafel M. Lakew, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.01137.pdf)
 
 2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
+
+2017 | Translating Low-Resource Languages by Vocabulary Adaptation from Close Counterparts | Qun Liu, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/3099556)
 
 2017 | Convolutional Sequence to Sequence Learning | Jonas Gehring, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1705.03122.pdf)
 

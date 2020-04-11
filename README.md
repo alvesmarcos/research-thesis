@@ -1,2 +1,2 @@
-# stones
-A minimalist Automated Machine Learning tool to optimize Neural Networks Models pipeline :diamonds: :gem:
+# vocab-translation
+A minimalist Automated Machine Learning tool to optimize dynamic vocabularies for translation models :snake: :gem:

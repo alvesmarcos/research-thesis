@@ -72,7 +72,9 @@ We propose a method to  **transfer knowledge**  across neural machine translatio
 
 Explorar técnica de *Transfer Learning* para o problema de **Multilingual Neural Machine Translation** utilizando vocabulário dinâmico (e.g German para English, Italy para English). 
 
-![Image](resources/MNTL_Diagram.png)
+<p align="center">
+  <img src="resources/MNTL_Diagram.png" alt="Paper Goals" width="400"/>
+</p>
 
 Basicamente a ideia é trabalhar como o *Google Translate* porém com um vocabulário reduzido.
 
@@ -82,7 +84,7 @@ Basicamente a ideia é trabalhar como o *Google Translate* porém com um vocabul
 
 Os autores do artigo apresentam duas estratégias de treinamento chamadas *progAdapt* e *progGrow*.
 
-1. **progAdapt** - Treina uma cadeia sequencial de redes transferindo os parâmetros de um modelo inicial L<sub>1</sub> para uma novo par de linguagem L<sub>2</sub> até L<sub>n</sub>. (source ↔ target para cada L)
+1. **progAdapt** - Treina uma cadeia sequencial de redes transferindo os parâmetros de um modelo inicial L<sub>1</sub> para uma novo par de linguagem L<sub>2</sub> até L<sub>n</sub>. (source ⇔ target para cada L)
 2.  **progGrow** - Progressivamente introduz um novo par de linguagem ao modelo inicial. (source → target para cada L)
 
 Para o **Vocabulário Dinâmico**, a abordagem simplesmente mantém a interseção (mesmas entradas) entre as novas entradas e a do treinamento anterior. No momento do treinamento, essas novas entradas são inicializadas aleatoriamente, enquanto os itens que já se encontravam no vocabulário mantém seu peso (*Word Embedding*).
@@ -109,11 +111,13 @@ embeds = nn.Embedding.from_pretrained(concat_embeds) # 3 words in vocab, 5 dimen
 
 ### 2.3. Experiments
 
-Com o objetivo de avaliar as duas abordagens apresentadas, os autores implementaram dois modelos bases para teste. O primeiro modelo **Bi-NMT** é treinado do zero para cada conjunto L (source ↔ target). O segundo modelo **M-NM** concatena o conjunto de todos os pares de linguagem L<sub>1</sub> ... L<sub>n</sub> e também é treinado do zero.
+Com o objetivo de avaliar as duas abordagens apresentadas, os autores implementaram dois modelos bases para teste. O primeiro modelo **Bi-NMT** é treinado do zero para cada conjunto L (source ⇔ target). O segundo modelo **M-NM** concatena o conjunto de todos os pares de linguagem L<sub>1</sub> ... L<sub>n</sub> e também é treinado do zero.
 
 A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o treinamento.
 
-![Image](resources/dataGrowAdap.png)
+<p align="center">
+  <img src="resources/dataGrowAdap.png" alt="Experiments" width="500"/>
+</p>
 
 ### 2.4. Results
 

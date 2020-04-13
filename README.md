@@ -64,11 +64,15 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 
 ### 2. Hierarchical Transfer Learning Architecture for Low-Resource Neural Machine Translation
 
-### Abstract
+#### Authors
+
+Surafel M. Lakew, Aliia Erofeeva, Matteo Negri, Marcello Federico e Marco Turchi
+
+#### Abstract
 
 We propose a method to  **transfer knowledge**  across neural machine translation (NMT) models by means of a shared  **dynamic vocabulary**. Our approach allows to extend an initial model for a given language pair to cover new languages by  **adapting its vocabulary as long as new data become available**  (i.e., introducing new vocabulary items if they are not included in the initial model). The parameter transfer mechanism is evaluated in two scenarios: i) to adapt a trained single language NMT system to work with a new language pair and ii) to continuously add new language pairs to grow to a multilingual NMT system. In both the scenarios our goal is to improve the translation performance, while minimizing the training convergence time. Preliminary experiments spanning five languages with different training data sizes (i.e., 5k and 50k parallel sentences) show a significant performance  **gain ranging from +3.85 up to +13.63 BLEU**  in different language directions. Moreover, when compared with training an NMT model from scratch,  **our transfer-learning approach**  allows us to reach higher performance after training up to 4% of the total training steps.
 
-### 2.1. Paper Goals
+#### 2.1. Paper Goals
 
 Explorar técnica de *Transfer Learning* para o problema de **Multilingual Neural Machine Translation** utilizando vocabulário dinâmico (e.g German para English, Italy para English). 
 
@@ -78,7 +82,7 @@ Explorar técnica de *Transfer Learning* para o problema de **Multilingual Neura
 
 Basicamente a ideia é trabalhar como o *Google Translate* porém com um vocabulário reduzido.
 
-### 2.2. Approach
+#### 2.2. Approach
 
 ![Image](resources/Approach.png)
 
@@ -109,7 +113,7 @@ concat_embeds = torch.FloatTensor([
 embeds = nn.Embedding.from_pretrained(concat_embeds) # 3 words in vocab, 5 dimensional embeddings
 ```
 
-### 2.3. Experiments
+#### 2.3. Experiments
 
 Com o objetivo de avaliar as duas abordagens apresentadas, os autores implementaram dois modelos bases para teste. O primeiro modelo **Bi-NMT** é treinado do zero para cada conjunto L (source ⇔ target). O segundo modelo **M-NM** concatena o conjunto de todos os pares de linguagem L<sub>1</sub> ... L<sub>n</sub> e também é treinado do zero.
 
@@ -119,6 +123,6 @@ A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o tr
   <img src="resources/dataGrowAdap.png" alt="Experiments" width="500"/>
 </p>
 
-### 2.4. Results
+#### 2.4. Results
 
 ![Image](resources/ResultGrowAdapted.png)

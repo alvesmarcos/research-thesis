@@ -20,7 +20,11 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 2018 | Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary | Surafel M. Lakew, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.01137.pdf)
 
+2018 | Neural Machine Translation with Dynamic Selection Network | Fei Han, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8781050)
+
 2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
+
+2017 | Dynamic Data Selection for Neural Machine Translation | Marlies van der Wees, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1708.00712.pdf)
 
 2017 | Translating Low-Resource Languages by Vocabulary Adaptation from Close Counterparts | Qun Liu, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/3099556)
 
@@ -59,8 +63,16 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |Ano|Título|Autor|Link|
 |---|---|---|---|
 |2019|Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary|Surafel M. Lakew, et al.|[`PDF`](https://arxiv.org/pdf/1811.01137.pdf)|
+|2017|Dynamic Data Selection for Neural Machine Translation|Marlies van der Wees, et al.|[`PDF`](https://arxiv.org/pdf/1708.00712.pdf)|
 
-### 1. How It Works
+### 1. Knowledge
+
+#### 1.1. Neural Machine Translation (NMT)
+
+#### 1.2. Transfer Learning (TL)
+
+#### 1.3. Statistical Machine Translation (SMT)
+
 
 ### 2. Hierarchical Transfer Learning Architecture for Low-Resource Neural Machine Translation
 
@@ -124,5 +136,41 @@ A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o tr
 </p>
 
 #### 2.4. Results
+
+![Image](resources/ResultGrowAdapted.png)
+
+### 3. Dynamic Data Selection for Neural Machine Translation
+
+#### Authors
+Marlies van der Wees, Arianna Bisazza e Christof Monz
+
+#### Abstract
+
+Intelligent **selection of training data** has proven a successful technique to simultaneously increase training efficiency and translation performance for **phrase-based machine translation (PBMT)**. With the recent increase in popularity of neural machine translation (NMT), we explore in this paper to what extent and how **NMT can also benefit from data selection**. While state-of-the-art data selection (Axelrod et al., 2011) consistently performs well for PBMT, we show that gains are substantially lower for NMT. Next, we introduce **dynamic data selection for NMT**, a method in which we vary the **selected subset** of training data between **different training epochs**. Our experiments show that the best results are achieved when applying a technique we call gradual fine-tuning, with improvements up to +2.6 BLEU over the original data selection approach and up to **+3.1 BLEU** over a general baseline.
+
+
+#### 3.1. Paper Goals
+
+Aplicar técnicas de seleção de dados para **Phrase-based Machine Translation (PBMT)** e **Neural Machine Translation (NMT)** com objetivo de explorar como ambos os modelos (**PBMT** e **MNT**) se beneficiam das mesmas.
+
+#### 3.2. Approach
+
+1. Static Data Selection - Ordena o conjunto de dados (*corpus*) de acordo com a função de entropia cruzada entre os pares L<sub>1</sub> e L<sub>2</sub> (*source* → *target*) e seleciona uma parte para o treinamento.
+
+2. **Dynamic Data Selection** - Apresenta 2 (duas) abordagens dinâmicas de seleção de dados, *Sampling* e *Gradual fine-tuning*.
+
+> **2.1. Sampling** - Seleciona uma amostra a cada epoch contendo os pares de sentenças melhores ranqueados.
+
+> **2.2 Gradual fine-tuning** - Gradativamente ao longo das epochs diminui o conjunto de treinamento deixando ao final os dados mais relevantes.
+
+#### 3.3. Experiments
+
+Foram selecionados 4 (quatro) diferentes domínios na forma German → English, analisando as duas abordagens apresentada no item anterior (*Static and Dynamic Data Selection*). 
+
+<p align="center">
+  <img src="resources/dataGrowAdap.png" alt="Experiments" width="500"/>
+</p>
+
+#### 3.4. Results
 
 ![Image](resources/ResultGrowAdapted.png)

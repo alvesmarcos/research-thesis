@@ -24,6 +24,8 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
 
+2018 | Incorporating Statistical Machine Translation Word Knowledge into Neural Machine Translation | Xing Wang, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8421063)
+
 2017 | Dynamic Data Selection for Neural Machine Translation | Marlies van der Wees, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1708.00712.pdf)
 
 2017 | Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation | Melvin Johnson, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1611.04558.pdf)

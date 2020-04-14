@@ -20,7 +20,11 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 2018 | Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary | Surafel M. Lakew, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.01137.pdf)
 
+2018 | Neural Machine Translation with Dynamic Selection Network | Fei Han, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8781050)
+
 2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
+
+2017 | Dynamic Data Selection for Neural Machine Translation | Marlies van der Wees, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1708.00712.pdf)
 
 2017 | Translating Low-Resource Languages by Vocabulary Adaptation from Close Counterparts | Qun Liu, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/3099556)
 
@@ -59,30 +63,44 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |Ano|Título|Autor|Link|
 |---|---|---|---|
 |2019|Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary|Surafel M. Lakew, et al.|[`PDF`](https://arxiv.org/pdf/1811.01137.pdf)|
+|2017|Dynamic Data Selection for Neural Machine Translation|Marlies van der Wees, et al.|[`PDF`](https://arxiv.org/pdf/1708.00712.pdf)|
 
-### 1. How It Works
+### 1. Knowledge
+
+#### 1.1. Neural Machine Translation (NMT)
+
+#### 1.2. Transfer Learning (TL)
+
+#### 1.3. Statistical Machine Translation (SMT)
+
 
 ### 2. Hierarchical Transfer Learning Architecture for Low-Resource Neural Machine Translation
 
-### Abstract
+#### Authors
+
+Surafel M. Lakew, Aliia Erofeeva, Matteo Negri, Marcello Federico e Marco Turchi
+
+#### Abstract
 
 We propose a method to  **transfer knowledge**  across neural machine translation (NMT) models by means of a shared  **dynamic vocabulary**. Our approach allows to extend an initial model for a given language pair to cover new languages by  **adapting its vocabulary as long as new data become available**  (i.e., introducing new vocabulary items if they are not included in the initial model). The parameter transfer mechanism is evaluated in two scenarios: i) to adapt a trained single language NMT system to work with a new language pair and ii) to continuously add new language pairs to grow to a multilingual NMT system. In both the scenarios our goal is to improve the translation performance, while minimizing the training convergence time. Preliminary experiments spanning five languages with different training data sizes (i.e., 5k and 50k parallel sentences) show a significant performance  **gain ranging from +3.85 up to +13.63 BLEU**  in different language directions. Moreover, when compared with training an NMT model from scratch,  **our transfer-learning approach**  allows us to reach higher performance after training up to 4% of the total training steps.
 
-### 2.1. Paper Goals
+#### 2.1. Paper Goals
 
 Explorar técnica de *Transfer Learning* para o problema de **Multilingual Neural Machine Translation** utilizando vocabulário dinâmico (e.g German para English, Italy para English). 
 
-![Image](resources/MNTL_Diagram.png)
+<p align="center">
+  <img src="resources/MNTL_Diagram.png" alt="Paper Goals" width="400"/>
+</p>
 
 Basicamente a ideia é trabalhar como o *Google Translate* porém com um vocabulário reduzido.
 
-### 2.2. Approach
+#### 2.2. Approach
 
 ![Image](resources/Approach.png)
 
 Os autores do artigo apresentam duas estratégias de treinamento chamadas *progAdapt* e *progGrow*.
 
-1. **progAdapt** - Treina uma cadeia sequencial de redes transferindo os parâmetros de um modelo inicial L<sub>1</sub> para uma novo par de linguagem L<sub>2</sub> até L<sub>n</sub>. (source ↔ target para cada L)
+1. **progAdapt** - Treina uma cadeia sequencial de redes transferindo os parâmetros de um modelo inicial L<sub>1</sub> para uma novo par de linguagem L<sub>2</sub> até L<sub>n</sub>. (source ⇔ target para cada L)
 2.  **progGrow** - Progressivamente introduz um novo par de linguagem ao modelo inicial. (source → target para cada L)
 
 Para o **Vocabulário Dinâmico**, a abordagem simplesmente mantém a interseção (mesmas entradas) entre as novas entradas e a do treinamento anterior. No momento do treinamento, essas novas entradas são inicializadas aleatoriamente, enquanto os itens que já se encontravam no vocabulário mantém seu peso (*Word Embedding*).
@@ -107,14 +125,58 @@ concat_embeds = torch.FloatTensor([
 embeds = nn.Embedding.from_pretrained(concat_embeds) # 3 words in vocab, 5 dimensional embeddings
 ```
 
-### 2.3. Experiments
+#### 2.3. Experiments
 
-Com o objetivo de avaliar as duas abordagens apresentadas, os autores implementaram dois modelos bases para teste. O primeiro modelo **Bi-NMT** é treinado do zero para cada conjunto L (source ↔ target). O segundo modelo **M-NM** concatena o conjunto de todos os pares de linguagem L<sub>1</sub> ... L<sub>n</sub> e também é treinado do zero.
+Com o objetivo de avaliar as duas abordagens apresentadas, os autores implementaram dois modelos bases para teste. O primeiro modelo **Bi-NMT** é treinado do zero para cada conjunto L (source ⇔ target). O segundo modelo **M-NM** concatena o conjunto de todos os pares de linguagem L<sub>1</sub> ... L<sub>n</sub> e também é treinado do zero.
 
 A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o treinamento.
 
-![Image](resources/dataGrowAdap.png)
+<p align="center">
+  <img src="resources/dataGrowAdap.png" alt="Experiments" width="500"/>
+</p>
 
-### 2.4. Results
+#### 2.4. Results
 
 ![Image](resources/ResultGrowAdapted.png)
+
+### 3. Dynamic Data Selection for Neural Machine Translation
+
+#### Authors
+Marlies van der Wees, Arianna Bisazza e Christof Monz
+
+#### Abstract
+
+Intelligent **selection of training data** has proven a successful technique to simultaneously increase training efficiency and translation performance for **phrase-based machine translation (PBMT)**. With the recent increase in popularity of neural machine translation (NMT), we explore in this paper to what extent and how **NMT can also benefit from data selection**. While state-of-the-art data selection (Axelrod et al., 2011) consistently performs well for PBMT, we show that gains are substantially lower for NMT. Next, we introduce **dynamic data selection for NMT**, a method in which we vary the **selected subset** of training data between **different training epochs**. Our experiments show that the best results are achieved when applying a technique we call gradual fine-tuning, with improvements up to +2.6 BLEU over the original data selection approach and up to **+3.1 BLEU** over a general baseline.
+
+
+#### 3.1. Paper Goals
+
+Aplicar técnicas de seleção de dados para **Phrase-based Machine Translation (PBMT)** e **Neural Machine Translation (NMT)** com objetivo de explorar como ambos os modelos (**PBMT** e **MNT**) se beneficiam das mesmas.
+
+#### 3.2. Approach
+
+![Image](resources/ApproachDataSelection.png)
+
+Os autores do artigo apresentam duas estratégias para seleção de dados, são elas:
+
+1. Static Data Selection - Ordena o conjunto de dados (*corpus*) de acordo com a função de entropia cruzada entre os pares L<sub>1</sub> e L<sub>2</sub> (*source* → *target*) e seleciona uma parte para o treinamento.
+
+2. **Dynamic Data Selection** - Apresenta 2 (duas) abordagens dinâmicas de seleção de dados, *Sampling* e *Gradual fine-tuning*.
+
+> **2.1. Sampling** - Seleciona uma amostra a cada epoch contendo os pares de sentenças melhores ranqueados.
+
+> **2.2 Gradual fine-tuning** - Gradativamente ao longo das epochs diminui o conjunto de treinamento deixando ao final os dados mais relevantes.
+
+#### 3.3. Experiments
+
+Foram selecionados 4 (quatro) diferentes domínios na forma German → English, analisando as duas abordagens apresentada no item anterior (*Static and Dynamic Data Selection*). 
+
+<p align="center">
+  <img src="resources/DataSelection.png" alt="Experiments" width="400"/>
+</p>
+
+#### 3.4. Results
+
+![Image](resources/ResultSelection.png)
+
+![Image](resources/ResultSelectionDynamic.png)

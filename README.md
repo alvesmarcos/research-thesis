@@ -26,6 +26,8 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 2017 | Dynamic Data Selection for Neural Machine Translation | Marlies van der Wees, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1708.00712.pdf)
 
+2017 | Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation | Melvin Johnson, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1611.04558.pdf)
+
 2017 | Translating Low-Resource Languages by Vocabulary Adaptation from Close Counterparts | Qun Liu, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/3099556)
 
 2017 | Convolutional Sequence to Sequence Learning | Jonas Gehring, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1705.03122.pdf)
@@ -64,6 +66,7 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |---|---|---|---|
 |2019|Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary|Surafel M. Lakew, et al.|[`PDF`](https://arxiv.org/pdf/1811.01137.pdf)|
 |2017|Dynamic Data Selection for Neural Machine Translation|Marlies van der Wees, et al.|[`PDF`](https://arxiv.org/pdf/1708.00712.pdf)|
+|2019|Multi-Round Transfer Learning for Low-Resource NMTUsing Multiple High-Resource Languages|Yang Liu, et al.|[`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)|
 
 ### 1. Knowledge
 
@@ -159,7 +162,7 @@ Aplicar técnicas de seleção de dados para **Phrase-based Machine Translation 
 
 Os autores do artigo apresentam duas estratégias para seleção de dados, são elas:
 
-1. Static Data Selection - Ordena o conjunto de dados (*corpus*) de acordo com a função de entropia cruzada entre os pares L<sub>1</sub> e L<sub>2</sub> (*source* → *target*) e seleciona uma parte para o treinamento.
+1. Static Data Selection - Ordena o conjunto de dados (*corpus*) de acordo com a função de entropia cruzada entre os pares de diferentes conjuntos e seleciona uma parte para o treinamento.
 
 2. **Dynamic Data Selection** - Apresenta 2 (duas) abordagens dinâmicas de seleção de dados, *Sampling* e *Gradual fine-tuning*.
 
@@ -180,3 +183,34 @@ Foram selecionados 4 (quatro) diferentes domínios na forma German → English, 
 ![Image](resources/ResultSelection.png)
 
 ![Image](resources/ResultSelectionDynamic.png)
+
+
+### 4. Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages
+
+#### Authors
+
+Mieradilijiang Maimaiti, Yang Liu, Huanbo Luan, Maosong  
+
+#### Abstract
+
+**Neural machine translation (NMT)** has made remarkable progress in recent years, but the performance of NMT suffers from a data sparsity problem since large-scale parallel corpora are only readily available for **high-resource languages (HRLs)**. In recent days, **transfer learning (TL)** has been used widely in **low-resource languages (LRLs)** machine translation, while TL is becoming one of the vital directions for addressing the data sparsity problem in low-resource NMT. As a solution, a transfer learning method in NMT is generally obtained via initializing the **low-resource model (child)** with the **high-resource model (parent)**. However, leveraging the original TL to low-resource models is neither able to make full use of highly related multiple HRLs nor to receive different parameters from the same parents. **In order to exploit multiple HRLs effectively**, we present a language-independent and **straight forward multi-round transfer learning (MRTL)** approach to low-resource NMT. Besides, with the **intention of reducing the differences between high-resource and low-resource languages at the character level**, we introduce a unified transliteration method for various language families, which are both semantically and syntactically highly analogous with each other. Experiments on low-resource datasets show that our approaches are effective, significantly outperform the state-of-the-artmethods, and yield improvements of **up to 5.63 BLEU points**.
+
+#### 4.1. Paper Goals
+
+Utilizar a técnica de **Transfer Learning** com múltiplas **High-Resource Language (HRLs)** para **Low-Resource Languages (LRLs)** com objetivo de maximizar o desempenho da tradução e treinamento.
+
+#### 4.2. Approach
+
+Os autores apresentam duas abordagens complementares com objetivo transferir o "conhecimento" aprendido de uma **HRL pai para LRL filha**.
+
+1. **Unified Transliteration** - Observa as similaridades entre as palavras dos pares de linguagem L<sub>3</sub> → L<sub>2</sub> (linguagem pai) e L<sub>1</sub> → L<sub>2</sub> (linguagem filha) para inicialização de θ<sub>L<sub>1</sub> → L<sub>2</sub></sub> (parâmetros relacionados a L<sub>1</sub> → L<sub>2</sub>).
+
+2. **Multi-Round Transfer Learning (MRTL)** - Dado o par de linguagem L<sub>1</sub> → L<sub>2</sub>, podemos inicializar θ<sub>L<sub>1</sub> → L<sub>2</sub></sub> (parâmetros relacionados a L<sub>1</sub> → L<sub>2</sub>) com uma linguagem pai L<sub>3</sub> → L<sub>2</sub> que por sua vez pode ser inicializada outra linguagem L<sub>k+1</sub> → L<sub>2</sub>. Ou seja, uma cadeia de *transfer learning*.
+
+#### 4.3. Experiments
+
+Para os experimentos os autores utilizam a arquitetura **Transformer** presente no framework **PyTorch**.
+
+Os experimentos são feitos levando consideração diferentes iterações de *Transfer Learning* sendo representado **R = N**, onde **N** representa o número de vezes que o processo foi feito.
+
+#### 4.4. Results

@@ -163,9 +163,9 @@ Os autores do artigo apresentam duas estratégias para seleção de dados, são 
 
 2. **Dynamic Data Selection** - Apresenta 2 (duas) abordagens dinâmicas de seleção de dados, *Sampling* e *Gradual fine-tuning*.
 
-> **2.1. Sampling** - Seleciona uma amostra a cada epoch contendo os pares de sentenças melhores ranqueados.
+    - **Sampling** - Seleciona uma amostra a cada epoch contendo os pares de sentenças melhores ranqueados.
 
-> **2.2 Gradual fine-tuning** - Gradativamente ao longo das epochs diminui o conjunto de treinamento deixando ao final os dados mais relevantes.
+    - **Gradual fine-tuning** - Gradativamente ao longo das epochs diminui o conjunto de treinamento deixando ao final os dados mais relevantes.
 
 #### 3.3. Experiments
 

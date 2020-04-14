@@ -2,6 +2,14 @@
 
 Repositório com artefatos de pesquisa para tese do mestrado em Informática do PPGI (Programa de Pós Graduação em Informática) da Universidade Federal da Paraíba.
 
+## Topics :scroll:
+
+1. Transfer Learning de alguma rede pre-treinada (e.g. Portuguese-English) ____________ para com vocabulário dinâmico.
+
+2. Transfer learning com a seleção de dados de treinamento
+
+3.
+
 ## Papers :books:
 
 2020 | Exploring Benefits of Transfer Learning in Neural Machine Translation | Tom Kocmi | arXiv | [`PDF`](https://arxiv.org/pdf/2001.01622.pdf)
@@ -71,13 +79,6 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |2019|Multi-Round Transfer Learning for Low-Resource NMTUsing Multiple High-Resource Languages|Yang Liu, et al.|[`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)|
 
 ### 1. Knowledge
-
-#### 1.1. Neural Machine Translation (NMT)
-
-#### 1.2. Transfer Learning (TL)
-
-#### 1.3. Statistical Machine Translation (SMT)
-
 
 ### 2. Hierarchical Transfer Learning Architecture for Low-Resource Neural Machine Translation
 
@@ -231,3 +232,4 @@ Os experimentos são feitos levando consideração diferentes iterações de *Tr
 ![Image](resources/f.png)
 
 ![Image](resources/g.png)
+

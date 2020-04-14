@@ -205,14 +205,29 @@ Utilizar a técnica de **Transfer Learning** com múltiplas **High-Resource Lang
 
 Os autores apresentam duas abordagens complementares com objetivo transferir o "conhecimento" aprendido de uma **HRL pai para LRL filha**.
 
+![Image](resources/c.png)
+
 1. **Unified Transliteration** - Observa as similaridades entre as palavras dos pares de linguagem L<sub>3</sub> → L<sub>2</sub> (linguagem pai) e L<sub>1</sub> → L<sub>2</sub> (linguagem filha) para inicialização de θ<sub>L<sub>1</sub> → L<sub>2</sub></sub> (parâmetros relacionados a L<sub>1</sub> → L<sub>2</sub>).
 
 2. **Multi-Round Transfer Learning (MRTL)** - Dado o par de linguagem L<sub>1</sub> → L<sub>2</sub>, podemos inicializar θ<sub>L<sub>1</sub> → L<sub>2</sub></sub> (parâmetros relacionados a L<sub>1</sub> → L<sub>2</sub>) com uma linguagem pai L<sub>3</sub> → L<sub>2</sub> que por sua vez pode ser inicializada outra linguagem L<sub>k+1</sub> → L<sub>2</sub>. Ou seja, uma cadeia de *transfer learning*.
+
+![Image](resources/a.png)
+
+![Image](resources/b.png)
 
 #### 4.3. Experiments
 
 Para os experimentos os autores utilizam a arquitetura **Transformer** presente no framework **PyTorch**.
 
+
 Os experimentos são feitos levando consideração diferentes iterações de *Transfer Learning* sendo representado **R = N**, onde **N** representa o número de vezes que o processo foi feito.
 
 #### 4.4. Results
+
+![Image](resources/d.png)
+
+![Image](resources/e.png)
+
+![Image](resources/f.png)
+
+![Image](resources/g.png)

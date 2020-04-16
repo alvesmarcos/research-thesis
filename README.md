@@ -4,12 +4,6 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 ## Topics :scroll:
 
-1. Transfer Learning de alguma rede pre-treinada (e.g. Portuguese-English) ____________ para com vocabulário dinâmico.
-
-2. Transfer learning com a seleção de dados de treinamento
-
-3.
-
 ## Papers :books:
 
 2020 | Exploring Benefits of Transfer Learning in Neural Machine Translation | Tom Kocmi | arXiv | [`PDF`](https://arxiv.org/pdf/2001.01622.pdf)
@@ -33,6 +27,10 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 2018 | Twitter Sentiment Analysis using Dynamic Vocabulary | Hrithik Katiyar, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8722407)
 
 2018 | Incorporating Statistical Machine Translation Word Knowledge into Neural Machine Translation | Xing Wang, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8421063)
+
+2018 | Neural Machine Translation Advised by Statistical Machine Translation: The Case of Farsi–Spanish Bilingually Low–Resource Scenario | Benyamin Ahmadnia, et al. | IEEE | [`PDF`](https://ieeexplore.ieee.org/document/8614221)
+
+2018 | Trivial Transfer Learning for Low-Resource Neural Machine Translation | Tom Kocmi, et al. | IEEE | [`PDF`](https://arxiv.org/pdf/1809.00357.pdf)
 
 2017 | Dynamic Data Selection for Neural Machine Translation | Marlies van der Wees, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1708.00712.pdf)
 
@@ -76,7 +74,8 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |---|---|---|---|
 |2019|Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary|Surafel M. Lakew, et al.|[`PDF`](https://arxiv.org/pdf/1811.01137.pdf)|
 |2017|Dynamic Data Selection for Neural Machine Translation|Marlies van der Wees, et al.|[`PDF`](https://arxiv.org/pdf/1708.00712.pdf)|
-|2019|Multi-Round Transfer Learning for Low-Resource NMTUsing Multiple High-Resource Languages|Yang Liu, et al.|[`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)|
+|2019|Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages|Yang Liu, et al.|[`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)|
+|2019|Transfer Learning across Languages from Someone Else’s NMT Model | Tom Kocmi, et al.|[`PDF`](https://arxiv.org/pdf/1909.10955.pdf)|
 
 ### 1. Knowledge
 
@@ -145,47 +144,22 @@ A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o tr
 
 ![Image](resources/ResultGrowAdapted.png)
 
-### 3. Dynamic Data Selection for Neural Machine Translation
+### 3. 
 
 #### Authors
-Marlies van der Wees, Arianna Bisazza e Christof Monz
 
 #### Abstract
 
-Intelligent **selection of training data** has proven a successful technique to simultaneously increase training efficiency and translation performance for **phrase-based machine translation (PBMT)**. With the recent increase in popularity of neural machine translation (NMT), we explore in this paper to what extent and how **NMT can also benefit from data selection**. While state-of-the-art data selection (Axelrod et al., 2011) consistently performs well for PBMT, we show that gains are substantially lower for NMT. Next, we introduce **dynamic data selection for NMT**, a method in which we vary the **selected subset** of training data between **different training epochs**. Our experiments show that the best results are achieved when applying a technique we call gradual fine-tuning, with improvements up to +2.6 BLEU over the original data selection approach and up to **+3.1 BLEU** over a general baseline.
-
-
 #### 3.1. Paper Goals
 
-Aplicar técnicas de seleção de dados para **Phrase-based Machine Translation (PBMT)** e **Neural Machine Translation (NMT)** com objetivo de explorar como ambos os modelos (**PBMT** e **MNT**) se beneficiam das mesmas.
 
 #### 3.2. Approach
 
-![Image](resources/ApproachDataSelection.png)
-
-Os autores do artigo apresentam duas estratégias para seleção de dados, são elas:
-
-1. Static Data Selection - Ordena o conjunto de dados (*corpus*) de acordo com a função de entropia cruzada entre os pares de diferentes conjuntos e seleciona uma parte para o treinamento.
-
-2. **Dynamic Data Selection** - Apresenta 2 (duas) abordagens dinâmicas de seleção de dados, *Sampling* e *Gradual fine-tuning*.
-
-    - **Sampling** - Seleciona uma amostra a cada epoch contendo os pares de sentenças melhores ranqueados.
-
-    - **Gradual fine-tuning** - Gradativamente ao longo das epochs diminui o conjunto de treinamento deixando ao final os dados mais relevantes.
 
 #### 3.3. Experiments
 
-Foram selecionados 4 (quatro) diferentes domínios na forma German → English, analisando as duas abordagens apresentada no item anterior (*Static and Dynamic Data Selection*). 
-
-<p align="center">
-  <img src="resources/DataSelection.png" alt="Experiments" width="400"/>
-</p>
 
 #### 3.4. Results
-
-![Image](resources/ResultSelection.png)
-
-![Image](resources/ResultSelectionDynamic.png)
 
 
 ### 4. Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages
@@ -206,7 +180,9 @@ Utilizar a técnica de **Transfer Learning** com múltiplas **High-Resource Lang
 
 Os autores apresentam duas abordagens complementares com objetivo transferir o "conhecimento" aprendido de uma **HRL pai para LRL filha**.
 
-![Image](resources/c.png)
+<p align="center">
+  <img src="resources/c.png" alt="Experiments" width="400"/>
+</p>
 
 1. **Unified Transliteration** - Observa as similaridades entre as palavras dos pares de linguagem L<sub>3</sub> → L<sub>2</sub> (linguagem pai) e L<sub>1</sub> → L<sub>2</sub> (linguagem filha) para inicialização de θ<sub>L<sub>1</sub> → L<sub>2</sub></sub> (parâmetros relacionados a L<sub>1</sub> → L<sub>2</sub>).
 
@@ -214,7 +190,10 @@ Os autores apresentam duas abordagens complementares com objetivo transferir o "
 
 ![Image](resources/a.png)
 
-![Image](resources/b.png)
+<p align="center">
+  <img src="resources/b.png" alt="Experiments" width="500"/>
+</p>
+
 
 #### 4.3. Experiments
 
@@ -225,11 +204,70 @@ Os experimentos são feitos levando consideração diferentes iterações de *Tr
 
 #### 4.4. Results
 
-![Image](resources/d.png)
+<p align="center">
+  <img src="resources/d.png" alt="Experiments" width="500"/>
+</p>
 
-![Image](resources/e.png)
+<p align="center">
+  <img src="resources/e.png" alt="Experiments" width="400"/>
+</p>
 
-![Image](resources/f.png)
+<p align="center">
+  <img src="resources/f.png" alt="Experiments" width="400"/>
+</p>
 
-![Image](resources/g.png)
+<p align="center">
+  <img src="resources/g.png" alt="Experiments" width="500"/>
+</p>
 
+### 5. Transfer Learning across Languages from Someone Else’s NMT Model
+
+#### Authors
+
+Tom Kocmi e Ondrej Bojar
+
+#### Abstract
+**Neural machine translation** is demanding in
+terms of training time, hardware resources,
+size, and quantity of parallel sentences. We
+propose a simple **transfer learning** method to
+recycle already trained models for different
+language pairs with no need for modifications in model architecture, hyper-parameters,
+or vocabulary. We achieve better translation
+quality and **shorter convergence times than
+when training from random initialization**. To
+show the applicability of our method, we recycle a Transformer model trained by different
+researchers for translating English-to-Czech
+and used it to seed models for seven language
+pairs. Our translation models are **significantly
+better** even when the **re-used model’s language
+pair is not linguistically related to the child
+language pair**, especially for **low-resource languages**. Our approach needs **only one pretrained model** for all transferring to all various languages pairs. Additionally, we improve
+this approach with a simple **vocabulary transformation**. We analyze the behavior of transfer learning to understand the gains from unrelated languages.
+
+#### 5.1. Paper Goals
+
+Explorar técnica de **Transfer Learning** metódo que utiliza os pesos de uma rede já treinada com par de linguagem totalmente diferente sem alterações na arquitetura, hiperparâmetros e vocabulário.
+
+#### 5.2. Approach
+
+Os autores utilizam um metódo chamado **Direct Transfer** onde o voculabulário e hiperparâmetros do modelo do pai são mantidos no treinamento do modelo filho. Além disso, Tom Kocmi e Ondrej Bojar apresentam uma algoritmo de **transformação de vocabulário** que busca manter as palavras comuns nos vocabulários do pai e filho.
+
+<p align="center">
+  <img src="resources/k.png" alt="Experiments" width="400"/>
+</p>
+
+
+#### 5.3. Experiments
+
+Os autores comparam 3 (três) abordagens diferentes que são chamadas:
+
+1. **Baseline** - Treinamento comum, sem utilizar *transfer-learning*.
+2. **Direct transfer** - Treinamento utilizando o vocubulário e hiperparâmetros do modelo pai.
+3. **Transformed vocab** - Treinamento utilizando hiperparâmetros da linguagem pai porém o vocabulário é adaptado para o modelo do filho.
+
+#### 5.4. Results
+
+<p align="center">
+  <img src="resources/l.png" alt="Experiments" width="600"/>
+</p>

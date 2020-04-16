@@ -191,7 +191,7 @@ Os autores apresentam duas abordagens complementares com objetivo transferir o "
 ![Image](resources/a.png)
 
 <p align="center">
-  <img src="resources/b.png" alt="Experiments" width="500"/>
+  <img src="resources/b.png" alt="Experiments" width="700"/>
 </p>
 
 
@@ -205,19 +205,19 @@ Os experimentos são feitos levando consideração diferentes iterações de *Tr
 #### 4.4. Results
 
 <p align="center">
-  <img src="resources/d.png" alt="Experiments" width="500"/>
+  <img src="resources/d.png" alt="Experiments" width="700"/>
 </p>
 
 <p align="center">
-  <img src="resources/e.png" alt="Experiments" width="400"/>
+  <img src="resources/e.png" alt="Experiments" width="700"/>
 </p>
 
 <p align="center">
-  <img src="resources/f.png" alt="Experiments" width="400"/>
+  <img src="resources/f.png" alt="Experiments" width="600"/>
 </p>
 
 <p align="center">
-  <img src="resources/g.png" alt="Experiments" width="500"/>
+  <img src="resources/g.png" alt="Experiments" width="700"/>
 </p>
 
 ### 5. Transfer Learning across Languages from Someone Else’s NMT Model
@@ -269,5 +269,5 @@ Os autores comparam 3 (três) abordagens diferentes que são chamadas:
 #### 5.4. Results
 
 <p align="center">
-  <img src="resources/l.png" alt="Experiments" width="600"/>
+  <img src="resources/l.png" alt="Experiments" width="800"/>
 </p>

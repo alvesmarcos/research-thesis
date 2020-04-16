@@ -54,6 +54,8 @@ Repositório com artefatos de pesquisa para tese do mestrado em Informática do 
 
 2015 | Transfer Learning for Bilingual Content Classification | Qian Sun, et al. | ACM | [`PDF`](https://dl.acm.org/doi/abs/10.1145/2783258.2788575)
 
+2015 | Incorporation of Syntactic-Semantic Aspects in a LIBRAS Machine Translation Service to Multimedia Platforms | Tiago, et al. | ACM | [`PDF`](https://dl.acm.org/doi/pdf/10.1145/2820426.2820434)
+
 ## Repositories :octocat:
 
 2020 | Awesome AutoML Papers | @hibayesian | 2.3k | [`GitHub`](https://github.com/hibayesian/awesome-automl-papers)
@@ -73,7 +75,7 @@ Os artigos escolhidos são apresentadados abaixo ordenado pelo ano de publicaç�
 |Ano|Título|Autor|Link|
 |---|---|---|---|
 |2019|Transfer Learning in Multilingual Neural Machine Translation with Dynamic Vocabulary|Surafel M. Lakew, et al.|[`PDF`](https://arxiv.org/pdf/1811.01137.pdf)|
-|2017|Dynamic Data Selection for Neural Machine Translation|Marlies van der Wees, et al.|[`PDF`](https://arxiv.org/pdf/1708.00712.pdf)|
+|2018|Trivial Transfer Learning for Low-Resource Neural Machine Translation|Tom Kocmi, et al. |[`PDF`](https://arxiv.org/pdf/1809.00357.pdf)|
 |2019|Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages|Yang Liu, et al.|[`PDF`](https://dl.acm.org/doi/abs/10.1145/3314945)|
 |2019|Transfer Learning across Languages from Someone Else’s NMT Model | Tom Kocmi, et al.|[`PDF`](https://arxiv.org/pdf/1909.10955.pdf)|
 
@@ -96,8 +98,6 @@ Explorar técnica de *Transfer Learning* para o problema de **Multilingual Neura
 <p align="center">
   <img src="resources/MNTL_Diagram.png" alt="Paper Goals" width="400"/>
 </p>
-
-Basicamente a ideia é trabalhar como o *Google Translate* porém com um vocabulário reduzido.
 
 #### 2.2. Approach
 
@@ -144,23 +144,40 @@ A imagem abaixo apresenta o conjunto de pares de linguagens utilizadas para o tr
 
 ![Image](resources/ResultGrowAdapted.png)
 
-### 3. 
+### 3. Trivial Transfer Learning for Low-Resource Neural Machine Translation
 
 #### Authors
+Tom Kocmi e Ondrej Bojar
 
 #### Abstract
 
+**Transfer learning** has been proven as an effective technique for neural machine translation under **low-resource conditions**. Existing methods require a common target language, language relatedness, or specific training tricks and regimes. We present a **simple transfer learning method**, where we **first train a “parent” model for a high-resource language pair and then continue the training on a low-resource pair only by replacing the training corpus**. This “child” model performs significantly better than the baseline trained for low-resource pair only. We are the first to show this for targeting different languages, and we observe the improvements even for unrelated languages with different alphabets.
+
 #### 3.1. Paper Goals
 
+Explorar técnica de **Transfer Learning** para melhorar o desempenho da tradução em linguagens *low-resource*.
 
 #### 3.2. Approach
 
+Como os próprios autores definem, o metódo utilizado é extremamente simples: Inicia o treinamento com um par de linguagem pai L<sub>1</sub> (high-resource) e após algumas *epochs* altera o corpus para outro par de linguagem filha L<sub>2</sub> (low-resource) sem resetar nenhum (hiper)parâmetros.
 
 #### 3.3. Experiments
 
+<p align="center">
+  <img src="resources/w.png" alt="Experiments" width="500"/>
+</p>
+
+Os autores utilizaram diferentes pares de linguagem realizando o treinamento dos modelos de 3 (três) formas:
+
+1. **Parent (only)** - Treinamento comum apenas utilizando um par de linguagem L<sub>1</sub>.
+2. **Child (only)** - Treinamento comum apenas utilizando um par de linguagem L<sub>2</sub>.
+3. **Transfer** - Abordagem proposta no artigo.
 
 #### 3.4. Results
 
+<p align="center">
+  <img src="resources/z.png" alt="Experiments" width="500"/>
+</p>
 
 ### 4. Multi-Round Transfer Learning for Low-Resource NMT Using Multiple High-Resource Languages
 
